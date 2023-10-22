@@ -1,4 +1,11 @@
 date_fmt=$(date "+%a %F %H:%M")
-battery=$(</sys/class/power_supply/BAT0/capacity)
+bat_cap=$(</sys/class/power_supply/BAT0/capacity)
 
-echo $battery $date_fmt
+bat_stat=$(</sys/class/power_supply/BAT0/status)
+if [[ $bat_stat != 'Discharging' ]]; then
+  charging='~'
+else
+  charging=''
+fi
+
+echo $charging$bat_cap $date_fmt
