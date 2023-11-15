@@ -57,7 +57,8 @@ exec swayidle -w \
 #
 # Example configuration:
 #
-input "1:1:AT_Translated_Set_2_Keyboard" {
+input "6700:24580:SEMICO_USB_Keyboard"{
+#input "1:1:AT_Translated_Set_2_Keyboard" {
 	xkb_layout		gb,ru,gr
 	xkb_model		pc105
 	xkb_variant		qwerty
